@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AccuWeather</title>
+    <link rel="shortcut icon" href="./assets/img/icon.png" type="images/x.icon">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel ="stylesheet" href="./assets/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+</head>
+<body  data-bs-spy="scroll" data-bs-target="#navbar-example">
+  <!--------------------------------------------------nav------------------------------------------>
+  <nav class="navbar navbar-expand-md navbar-light fixed-top bg-white" id="navbar-example">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="./assets/img/icon.png" class="w-25">AccuWeather</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#forecast">Forecast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#weather-today">Details</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#subscribe">Subscribe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--------------------------------------------------home------------------------------------------>
+  <header id ="home">
+    <div class="container py-5">
+      <div class="row">
+        <div class="col-xl-8 col-lg-6 mb-lg-0 mb-2 pt-5">
+          <div class="home-caption pt-5">
+          <h5 class="custom-color position-relative">Weather and Forecast</h5>
+          <h2 class="my-3 fw-400">Daily Weather Forecast Update News</h2>
+          <p class="fw-500">Get the latest weather forecast for today with up-to-date information on temperature, precipitation, and more.</p>
+           <form action="">
+          <div class="input-group m-0">
+            <input type="text" class="form-control"  name="search" required id="inputLocation" placeholder="Search for location...">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        </form>
+        </div>
+        </div>
+        <div class="col-xl-4 col-lg-6 my-4">
+          <div class="details  text-center my-3" id="today-content">
+            <div class="h-100 d-flex align-items-center justify-content-center flex-column"><span class="loader"></span></div>
+          </div>
+      </div>
+      </div>
+    </div>
+  </header>
+    <!--------------------------------------------------forecast------------------------------------------>
+  <section id="forecast">
+  <div class="container my-5 py-5">
+    <div class="heading text-center my-4">
+      <h2 class="fw-5 mb-3">Weekly Weather Forcast</h2>
+      <p class="fw-400 mx-auto">The 'Recent Search Weather' section displays the latest weather information for the cities you have recently searched. Stay up-to-date with the weather conditions of your preferred cities with this section.</p>
+    </div>
+    <div class="row">
+<div class="col-lg-6 my-4">
+          <div class="Weather-forcast text-center mb-md-3 p-5 rounded-5" id="tomorrow-content">
+           <span class="loader"></span>
+            
+         
+         
+          </div>
+      </div>
+      <div class="col-lg-6 my-4">
+        <div class="Weather-forcast text-center  p-5 rounded-5" id="afterTomorrow-content">
+          <span class="loader"></span>
+       
+       
+        </div>
+    </div>
+    </div>
+  </div>
+  </section>
+    <!--------------------------------------------------details------------------------------------------>
+  <section id="weather-today">
+    
+      <div class="container mb-5 ">
+        <div class="heading text-center my-5">
+          <h2 class="fw-5 mb-3">Today Weather Details</h2>
+          <p class="fw-400 mx-auto">The 'Recent Search Weather' section displays the latest weather information for the cities you have recently searched. Stay up-to-date with the weather conditions of your preferred cities with this section.</p>
+          </div>
+            <div class="row text-center ">
+                
+                <div class="col-lg-6 mb-xl-0 mb-3">
+                  <div class="col-lg-12">
+                    <div class="today-details py-5 rounded-4 mb-3">
+                        <img src="./assets/img/icon.png" alt="wind" class="mb-3">
+                        <div class="d-flex align-items-center justify-content-center ">
+                            <p class="me-2 fs-4 fw-500">Wind</p> 
+                            <p class="fs-4 fw-500" id="wind"><span class="loader-2 ms-4"></span></p>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-12">
+                    <div class="today-details text-center py-5 rounded-4 mb-3">
+                      <i class="fa-solid fa-compass fs-1 mb-3"></i>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <p class="me-2 fs-4 fw-500">Direction</p> 
+                            <p class="fs-4 fw-500" id="dir"><span class="loader-2 ms-4"></span></p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="today-details text-center py-5 rounded-4 mb-3">
+                      <i class="fa-solid fa-eye fs-1 mb-3"></i>
+                        <div class="d-flex align-items-center justify-content-center">
+                            <p class="me-2 fs-4 fw-500">Visibility</p> 
+                            <p class="fs-4 fw-500" id ="vis"><span class="loader-2 ms-4"></span></p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="row">
+                        <div class="col-lg-12 mb-2">
+                            <div class="today-details rounded-4 py-4">
+                              <i class="fa-solid fa-droplet me-2 fs-4"></i><br>
+                              <i class="fa-solid fa-droplet me-2 fs-4"></i><i class="fa-solid fa-droplet fs-1"></i>
+                                <div class="d-flex align-items-center justify-content-center mt-3">
+                                    <p class="fw-500 me-2 fs-4">Humidity</p> 
+                                    <p class="fw-600 fs-4" id ="humidity"><span class="loader-2 ms-4"></span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                          
+                          <div class="today-details my-2  text-center px-5  rounded-4">
+                            <div class="text-end pt-5">
+                              <img src="./assets/img/sun.png" alt="sun">
+                          </div>
+                            <canvas id="myChart" class="mt-1"></canvas>
+                                <div class="d-flex align-items-center justify-content-between">
+                                    <div class="text-center">
+                                        <p class="mt-2 mb-0">Sunrise</p>
+                                        <p id="sunrise"><span class="loader-2 ms-4"></span></p>
+                                    </div>
+                                    <div class="text-center">
+                                        <p class="mt-2 mb-0">Sunset</p>
+                                        <p id="sunset"><span class="loader-2 ms-4"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>    
+        </div>
+        </div>
+    </section>
+      <!--------------------------------------------------subscribe------------------------------------------>
+    <section id="subscribe" class="text-center my-5">
+      <div class="container py-5">
+              <h2 class="fs-1">Stay Safe With Weather Updates</h2>
+                      <div class="input-group mx-auto mt-5">
+                        <input type="text" class="form-control"  name="email" required placeholder="Email...">
+                        <button type="submit" class="btn"><i class="fas fa-paper-plane fs-3"></i></button>
+                    </div>
+      </div>
+  </section>
+    <!--------------------------------------------------contact------------------------------------------>
+  <section id="contact" class="my-5 py-5">
+    <div class="contact-bg w-100 d-flex justify-content-center align-items-center my-5">
+   <h1 class="text-white">CONTACT US</h1>
+  </div>
+  <div class="container my-5 px-lg-5 py-5">
+    <form>
+      <div class="col-lg-9 mx-auto rounded-5 py-5 px-3">
+    <div class="row gy-3 px-lg-5">
+      <div class="col-lg-6">
+        <input type="text" placeholder="Name" name="userName" required class="form-control">
+      </div>
+      <div class="col-lg-6">
+        <input type="email" placeholder="Email" name="userEmail" required class="form-control">
+      </div>
+      <div class="col-lg-6">
+        <input type="text" placeholder="Phone" name="userPhone" required class="form-control">
+      </div>
+      <div class="col-lg-6">
+        <input type="email" placeholder="Subject" name="subject" required class="form-control">
+      </div>
+      <div class="col-lg-12">
+        <textarea  name="message" placeholder="Message" required="required" class="form-control" rows="7"></textarea>
+      </div>
+      <div class="col-lg-12 text-center">
+      <input type="submit" value="Send" class="btn">
+    </div>
+    </div>
+  </div>
+    </form>
+  </div>
+  </section> 
+    <!--------------------------------------------------footer----------------------------------------->   
+  <footer class="footer mt-5 pb-0 px-2 ">
+    <div class="container">
+        <div class="text-center">
+          
+              <img src="./assets/img/icon.png"><span class="fs-5">AccuWeather</span>
+            
+            <p class="fw-400 pt-2 mx-auto footer-p">A weather app that provides accurate and up-to-date weather information for users.</p>
+            <ul class="icon list-unstyled d-flex justify-content-center mx-auto">
+                <li>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                </li>
+                <li>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                </li>
+            </ul>
+           
+            <p class="fw-400">©2024 AccuWeather, All Rights Reserved.</p>
+        </div>
+    </div>
+</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+ <script src="./assets/js/script.js"></script>
+ <script src="./assets/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

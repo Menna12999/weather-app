@@ -1,0 +1,345 @@
+body{
+  font-family: "Poppins", sans-serif;
+  color: #252222;
+}
+html{
+  scroll-padding: 4.75rem;
+  scroll-behavior: smooth;
+}
+.custom-color{
+color: #ffa033;
+}
+.fw-400{
+  font-weight: 400;
+}
+.fw-500{
+  font-weight: 500;
+}
+.fw-600{
+  font-weight: 600;
+}
+
+
+.loader {
+  width: 180px;
+  height: 140px;
+  display: block;
+  margin: 0 auto 20px;
+  background-image: radial-gradient(circle 25px at 25px 25px, #667CA1 100%, transparent 0), radial-gradient(circle 50px at 50px 50px, #667CA1 100%, transparent 0), radial-gradient(circle 25px at 25px 25px, #667CA1 100%, transparent 0), radial-gradient(circle 15px at 15px 15px, #667CA1 100%, transparent 0), linear-gradient(#667CA1 50px, transparent 0);
+  background-size: 50px 50px, 100px 75px, 50px 50px, 30px 32px, 136px 20px;
+  background-repeat: no-repeat;
+  background-position: 0px 30px, 30px 0px, 113px 29px, 147px 50px, 23px 60px;
+  position: relative;
+  box-sizing: border-box;
+}
+.loader::after {
+  content: '';  
+  position: absolute;
+  left: 2px;
+  top: 65px;
+  width: 2px;
+  height: 6px;
+  color: #667CA1;
+  box-sizing: border-box;
+  animation: animloader 0.6s linear infinite;
+}
+
+@keyframes animloader {
+  0% {
+    box-shadow: 25px 0 #667CA1, 50px 0 #667CA1, 75px 0 #667CA1, 100px 0 #667CA1, 125px 0 #667CA1, 150px 0 #667CA1, 25px 0 #667CA1, 50px 0 #667CA1, 75px 0 #667CA1, 100px 0 #667CA1, 125px 0 #667CA1, 150px 0 #667CA1;
+  }
+  50% {
+    box-shadow: 25px 20px #667CA1, 50px 60px rgba(255, 255, 255, 0), 75px 30px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0), 125px 40px #667CA1, 150px 60px rgba(255, 255, 255, 0), 25px 20px #667CA1, 50px 30px #667CA1, 75px 10px #667CA1, 100px 30px #667CA1, 125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 25px 60px rgba(255, 255, 255, 0), 50px 60px rgba(255, 255, 255, 0), 75px 50px rgba(255, 255, 255, 0), 100px 70px rgba(255, 255, 255, 0), 125px 70px rgba(255, 255, 255, 0), 150px 60px rgba(255, 255, 255, 0), 25px 80px rgba(255, 255, 255, 0), 50px 80px rgba(255, 255, 255, 0), 75px 70px rgba(255, 255, 255, 0), 100px 60px rgba(255, 255, 255, 0), 125px 30px rgba(255, 255, 255, 0), 150px 30px rgba(255, 255, 255, 0);
+  }
+}
+
+/*----------------------------------navbar--------------------------------------------------------------------*/
+.navbar-nav .nav-link{
+  font-weight: 500;
+  font-size: 19px;
+  line-height: 29px;
+  color: #252222;
+  transition: 0.4s all;
+}
+
+.navbar-nav .nav-link:hover,.navbar-nav .nav-link.active{
+  color: #ffa033;
+}
+/*----------------------------------header-------------------------------------------------------------------*/
+
+#home{
+  background-image: url(../img/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-top: 4.75rem;
+}
+#home .home-caption  h5{
+  font-size: 1.4375rem;
+  text-indent: 3rem;
+}
+#home .home-caption h5::before{
+  content: "";
+    position: absolute;
+    left:0;
+    top: 49%;
+    width: 30px;
+    height: 2px;
+    background-color: #ffa033;
+}
+#home h2{
+  font-size: 3.875rem ;
+  line-height: 5.1875rem;
+}
+#home p{
+  font-size: 1.1875rem;
+  line-height: 1.8125rem;
+}
+#home .details{
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.79) 0%, rgba(240, 245, 255, 0) 100%);
+  padding: 48px 0;
+  border-radius: 1.25rem;
+  color: #000;
+  height: 33rem;
+}
+#home .details h4{
+    font-size: 1.5rem;
+  line-height: 1.8125rem;
+}
+#home .details h4{
+  font-size: 1.4375rem;
+  line-height: 1.75rem;
+}
+#home .details h2{
+  font-size: 5.9375rem;
+  line-height: 7.125rem;
+}
+@media screen and (max-width: 1299px) {
+  #home .home-caption h2 {
+      font-size: 3.875rem ;
+      line-height: 6rem;
+  }
+}
+@media screen and (max-width: 1199px) {
+  #home .home-caption h2 {
+      font-size: 2.375rem;
+      line-height: 5rem;
+  }
+}
+@media screen and (max-width: 992px) {
+  #home .home-caption h2 {
+      font-size: 4.6875rem;
+      line-height: 4rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  #home .home-caption h2 {
+      font-size: 2.375rem;
+      line-height: 3rem;
+  }
+}
+#home .details p{
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+}
+#home .details span{
+  font-size: 1.4375rem;
+  line-height: 1.75rem;
+}
+
+#home .form-control:focus {
+  background-color:transparent;
+  border-color: none;
+  border:none;
+  box-shadow: none;
+}
+#home .form-control{
+  border: transparent;
+  background-color:transparent;
+}
+.fa-magnifying-glass{
+  cursor: pointer;
+  background-color: none;
+  font-size: 1.5rem;
+  padding: 0.5rem 0;
+}
+#home .input-group{
+  border-radius: 20px;
+  background: linear-gradient(180deg, #FFFFFF 0%, rgba(240, 245, 255, 0.6) 100%);
+  padding:20px 16px;
+  backdrop-filter: blur(25px);
+    border-radius: 6.4px;
+    width: 80%;
+}
+input::placeholder{
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 1.4375rem;
+}
+
+/**************************************************forecast*********************************/
+
+ .heading h2{
+  font-size: 2.5rem;
+  line-height: 3rem;
+  color: #000;
+}
+ .heading p{
+  font-size: 1rem;
+  line-height: 1.625rem;
+ color:#898e8f;
+}
+@media screen  and (min-width:992px){
+  .heading p{
+   width: 80%;
+  } 
+ 
+}
+.Weather-forcast{
+background-color: #F1F7FF;
+}
+.day{
+  color: #408CD2;
+}
+span i{
+  color: #898e8f;
+}
+
+/*********************************************today weather details**********************/
+
+.today-details{
+  background-color: #F1F7FF;
+}
+#weather-today,#weather-today .today-details p{
+  color:#000;
+}
+#weather-today i{
+  color: #ffa033;
+}
+/*****************************subscribe*****************/
+#subscribe{
+  background-image: url(../img/subscribe.png);
+  padding: 8rem 0;
+  background-attachment: fixed;
+  background-position:right;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+#subscribe .input-group{
+  border-radius: 20px;
+  background-color: #F0F5FF;
+  padding:10px 16px;
+  backdrop-filter: blur(25px);
+    border-radius: 6.4px;
+    width: 80%;
+}
+#subscribe .form-control{
+  background-color: transparent;
+  border: none;
+}
+#subscribe .form-control:focus{
+  border-color: transparent;
+  box-shadow: none;
+}
+.fa-paper-plane,.fa-paper-plane:hover{
+  color: #ffa033;
+}
+
+/***************************CONTACT*****************************************************/
+
+.contact-bg{
+  background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../img/Clouds.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 10rem 0;
+}
+#contact .col-lg-9{
+  background-color: #F0F5FF;
+}
+#contact .form-control{
+  background-color: transparent;
+}
+#contact .form-control:focus{
+  box-shadow: none;
+  border-color:#ffa033
+}
+#contact .form-control{
+  border: 2px solid #C8C8C8;
+  border-radius: 1rem;
+ padding: 0.8rem ;
+}
+#contact input[type='submit']{
+  background-color: #ffa033;
+  padding: 1rem 2rem;
+  color: #fff;
+  transition: 0.4s all;
+}
+#contact input[type='submit']:hover{
+  background-color: #fff;
+  color: #ffa033;
+}
+
+
+/***************************footer***********************/
+.icon{
+  width: 6rem;
+}
+.icon i{
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 1rem;
+  transition: 0.4s all;
+}
+.icon i:hover{
+background-color: #000;
+color: #fff;
+}
+footer a{
+  text-decoration: none;
+  color: #000;
+}
+footer p{
+  font-size: 1rem;
+}
+@media screen  and (min-width:992px){
+  .footer-p{
+   width: 40%;
+
+  } 
+ 
+}
+.loader-2 {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: block;
+  margin:15px 0;
+  position: relative;
+  background: #FFF;
+  box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  box-sizing: border-box;
+  animation: shadowPulse 2s linear infinite;
+}
+
+@keyframes shadowPulse {
+  33% {
+    background: #FFF;
+    box-shadow: -24px 0 #ffa033, 24px 0 #FFF;
+  }
+  66% {
+    background: #ffa033;
+    box-shadow: -24px 0 #FFF, 24px 0 #FFF;
+  }
+  100% {
+    background: #FFF;
+    box-shadow: -24px 0 #FFF, 24px 0 #ffa033;
+  }
+}
